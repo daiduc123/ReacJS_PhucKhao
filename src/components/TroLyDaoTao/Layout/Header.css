@@ -1,0 +1,209 @@
+/* Tổng thể Header */
+.TLDT_header-wrapper {
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Thanh màu đen phía trên */
+.TLDT_top-bar {
+  height: 30px;
+  background-color: #212529;
+  color: white;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+/* Phần Header chính */
+.TLDT_main-header {
+  height: 72px;
+  background: linear-gradient(
+    135deg,
+    var(--color-success) 0%,
+    var(--color-success-dark) 100%
+  );
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  box-shadow: 0 2px 8px rgba(46, 125, 50, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.TLDT_main-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.05) 50%,
+    transparent 100%
+  );
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.TLDT_logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.TLDT_logo {
+  height: 50px;
+  margin-right: 15px;
+}
+
+.TLDT_system-name h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+}
+
+.TLDT_system-name span {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+.TLDT_user-dropdown-wrapper {
+  position: relative;
+}
+
+.TLDT_user-dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-base);
+  z-index: 1000;
+}
+
+.TLDT_user-dropdown:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  z-index: 9999;
+  transform: translateY(-1px);
+}
+
+.TLDT_user-info {
+  margin-left: 10px;
+  margin-right: 8px;
+}
+
+.TLDT_user-info span {
+  display: block;
+  font-weight: bold;
+}
+
+.TLDT_user-info small {
+  font-size: 0.75rem;
+  opacity: 0.9;
+}
+
+.TLDT_dropdown-icon {
+  transition: transform 0.3s ease;
+}
+
+.TLDT_dropdown-icon.open {
+  transform: rotate(180deg);
+}
+
+.TLDT_dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  min-width: 180px;
+  overflow: hidden;
+  z-index: 1001;
+  transform-origin: top right;
+  animation: TLDT_dropdown-fade-in 0.2s ease-out forwards;
+  border: 1px solid #ddd;
+}
+
+.TLDT_dropdown-menu button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 12px 15px;
+  background: none;
+  border: none;
+  text-align: left;
+  color: #333;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.TLDT_dropdown-menu button:hover {
+  background-color: #f0f0f0;
+}
+
+.TLDT_dropdown-menu button svg {
+  margin-right: 10px;
+  color: #6c757d;
+}
+
+@keyframes TLDT_dropdown-fade-in {
+  from {
+    opacity: 0;
+    transform: scaleY(0.8) translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: scaleY(1) translateY(0);
+  }
+}
+
+.TLDT_hocky {
+  background-color: #e5e7eb;
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--color-danger);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.TLDT_hocky:hover {
+  background-color: #d1d5db;
+}
+
+.TLDT_hocky img {
+  width: 12px;
+  height: 12px;
+  filter: invert(28%) sepia(97%) saturate(7490%) hue-rotate(357deg)
+    brightness(103%) contrast(120%);
+  margin-left: 20px;
+  margin-right: 5px;
+}

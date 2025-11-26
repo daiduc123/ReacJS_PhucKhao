@@ -1,0 +1,271 @@
+/* Tổng thể Header */
+.AD_header-wrapper {
+  width: 100%;
+  box-shadow: var(--shadow-md);
+  position: sticky; /* Giữ header ở trên cùng */
+  top: 0;
+  z-index: 100;
+  background-color: var(--color-white);
+}
+
+/* Thanh màu đen phía trên */
+.AD_top-bar {
+  height: 32px;
+  background-color: var(--color-gray-900);
+  color: var(--color-white);
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  font-weight: 500;
+}
+
+/* Phần Header chính */
+.AD_main-header {
+  height: 72px; /* Chiều cao cố định */
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  color: var(--color-white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  box-shadow: 0 2px 8px rgba(0, 110, 183, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.AD_main-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.05) 50%, transparent 100%);
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.AD_logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.AD_logo {
+  height: 50px; /* Điều chỉnh kích thước logo */
+  margin-right: 15px;
+}
+
+.AD_system-name h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white; /* Đảm bảo màu trắng */
+}
+
+.AD_system-name span {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+.AD_user-dropdown-wrapper {
+  position: relative;
+}
+
+.AD_user-dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-base);
+  z-index: 1000;
+}
+
+.AD_user-dropdown:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-1px);
+}
+
+.AD_user-info {
+  margin-left: 10px;
+  margin-right: 8px; /* Khoảng cách với icon dropdown */
+}
+
+.AD_user-info span {
+  display: block;
+  font-weight: bold;
+}
+
+.AD_user-info small {
+  font-size: 0.75rem;
+  opacity: 0.9;
+}
+
+.AD_dropdown-icon {
+  transition: transform 0.3s ease;
+}
+
+.AD_dropdown-icon.open {
+  transform: rotate(180deg);
+}
+
+.AD_dropdown-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: linear-gradient(135deg, #003366 0%, #004488 100%);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  border-radius: var(--radius-lg);
+  min-width: 280px;
+  overflow: hidden;
+  z-index: 1002;
+  transform-origin: top right;
+  animation: AD_dropdown-fade-in 0.2s ease-out forwards;
+  border: none;
+  display: block;
+}
+
+.AD_dropdown-header {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.AD_dropdown-avatar {
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.AD_dropdown-user-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.AD_dropdown-name {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.AD_dropdown-role {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.AD_dropdown-header-icon {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.AD_dropdown-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 0;
+}
+
+.AD_dropdown-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 14px 16px;
+  background: none;
+  border: none;
+  text-align: left;
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  font-weight: 500;
+  gap: 12px;
+}
+
+.AD_dropdown-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.AD_dropdown-item-icon {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 16px;
+  flex-shrink: 0;
+  width: 20px;
+  text-align: center;
+}
+
+.AD_dropdown-item:hover .AD_dropdown-item-icon {
+  color: #ffffff;
+}
+
+.AD_dropdown-item-logout .AD_dropdown-item-icon {
+  color: #ff9800;
+}
+
+.AD_dropdown-item-logout:hover {
+  background-color: rgba(255, 152, 0, 0.2);
+}
+
+@keyframes AD_dropdown-fade-in {
+  from {
+    opacity: 0;
+    transform: scaleY(0.8) translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: scaleY(1) translateY(0);
+  }
+}
+
+
+.AD_success-message {
+  color: #28a745;
+  font-size: 0.875em;
+  margin-top: 0.25rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.AD_hocky {
+  background-color: #E5E7EB;
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--color-danger);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.AD_hocky:hover {
+  background-color: #D1D5DB;
+}
+
+.AD_hocky img {
+  width: 12px;
+  height: 12px;
+  filter: invert(28%) sepia(97%) saturate(7490%) hue-rotate(357deg)
+    brightness(103%) contrast(120%);
+  margin-left: 20px;
+  margin-right: 5px;
+}

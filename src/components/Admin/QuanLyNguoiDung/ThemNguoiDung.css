@@ -1,0 +1,137 @@
+/* Dùng chung cho các form trong modal */
+.AD_form .AD_form-group {
+  margin-bottom: 15px;
+}
+.AD_form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #333;
+}
+.AD_form input,
+.AD_form select,
+.AD_form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Quan trọng */
+}
+.AD_form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+.AD_btn-secondary {
+  background-color: #6c757d;
+}
+
+/* Grid layout cho form thêm/sửa user */
+.AD_add-user-form .AD_form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* Phần mật khẩu */
+.AD_password-section {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 2px solid var(--border-color-light);
+}
+
+.AD_checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.AD_checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  margin: 0;
+}
+
+.AD_checkbox-group input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+  cursor: pointer;
+}
+
+.AD_btn-small {
+  padding: 6px 12px;
+  font-size: 13px;
+}
+
+.AD_generated-password-box {
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+  border: 2px solid var(--color-primary);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  margin: 16px 0;
+}
+
+.AD_generated-password-box label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.AD_password-display {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #ffffff;
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
+}
+
+.AD_password-display code {
+  flex: 1;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  color: var(--color-primary);
+  font-weight: 600;
+  letter-spacing: 1px;
+  word-break: break-all;
+}
+
+.AD_btn-copy {
+  background: var(--color-primary);
+  color: #ffffff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.AD_btn-copy:hover {
+  background: var(--color-primary-dark);
+  transform: scale(1.05);
+}
+
+.AD_copy-success {
+  display: block;
+  color: var(--color-success);
+  font-size: 12px;
+  margin-top: 8px;
+  font-weight: 600;
+  animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,279 @@
+/* Tổng thể Header */
+.CVKT_header-wrapper {
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Thanh màu đen phía trên */
+.CVKT_top-bar {
+  height: 30px;
+  background-color: #212529;
+  color: white;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+/* Phần Header chính */
+.CVKT_main-header {
+  height: 72px;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-primary-dark) 100%
+  );
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  box-shadow: 0 2px 8px rgba(0, 110, 183, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.CVKT_main-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.05) 50%,
+    transparent 100%
+  );
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.CVKT_logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.CVKT_logo {
+  height: 50px;
+  margin-right: 15px;
+}
+
+.CVKT_system-name h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+}
+
+.CVKT_system-name span {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+.CVKT_user-dropdown-wrapper {
+  position: relative;
+}
+
+.CVKT_user-dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-base);
+  z-index: 9999;
+}
+
+.CVKT_user-dropdown:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-1px);
+}
+
+.CVKT_user-info {
+  margin-left: 10px;
+  margin-right: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.CVKT_user-name {
+  display: block;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+.CVKT_user-role {
+  font-size: 0.75rem;
+  opacity: 0.9;
+  line-height: 1.2;
+}
+
+.CVKT_dropdown-icon {
+  transition: transform 0.3s ease;
+}
+
+.CVKT_dropdown-icon.open {
+  transform: rotate(180deg);
+}
+
+.CVKT_dropdown-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: linear-gradient(135deg, #003366 0%, #004488 100%);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  border-radius: var(--radius-lg);
+  min-width: 280px;
+  overflow: hidden;
+  z-index: 1002;
+  transform-origin: top right;
+  animation: CVKT_dropdown-fade-in 0.2s ease-out forwards;
+  border: none;
+  display: block;
+}
+
+.CVKT_dropdown-header {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.CVKT_dropdown-avatar {
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.CVKT_dropdown-user-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.CVKT_dropdown-name {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.CVKT_dropdown-role {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.CVKT_dropdown-header-icon {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.CVKT_dropdown-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 0;
+}
+
+.CVKT_dropdown-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 14px 16px;
+  background: none;
+  border: none;
+  text-align: left;
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  font-weight: 500;
+  gap: 12px;
+}
+
+.CVKT_dropdown-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.CVKT_dropdown-item-icon {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 16px;
+  flex-shrink: 0;
+  width: 20px;
+  text-align: center;
+}
+
+.CVKT_dropdown-item:hover .CVKT_dropdown-item-icon {
+  color: #ffffff;
+}
+
+.CVKT_dropdown-item-logout .CVKT_dropdown-item-icon {
+  color: #ff9800;
+}
+
+.CVKT_dropdown-item-logout:hover {
+  background-color: rgba(255, 152, 0, 0.2);
+}
+
+@keyframes CVKT_dropdown-fade-in {
+  from {
+    opacity: 0;
+    transform: scaleY(0.8) translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: scaleY(1) translateY(0);
+  }
+}
+
+.CVKT_hocky {
+  background-color: #e5e7eb;
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--color-danger);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.CVKT_hocky:hover {
+  background-color: #d1d5db;
+}
+
+.CVKT_hocky img {
+  width: 12px;
+  height: 12px;
+  filter: invert(28%) sepia(97%) saturate(7490%) hue-rotate(357deg)
+    brightness(103%) contrast(120%);
+  margin-left: 20px;
+  margin-right: 5px;
+}

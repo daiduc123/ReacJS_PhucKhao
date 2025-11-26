@@ -1,0 +1,291 @@
+.xulydon-container {
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.xulydon-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.btn-back {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: #757575;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-back:hover {
+  background: #616161;
+}
+
+.xulydon-header h1 {
+  color: #1976d2;
+  margin: 0;
+}
+
+.step-indicator {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.step-indicator::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #e0e0e0;
+  z-index: 0;
+}
+
+.step {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #e0e0e0;
+  color: #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.step.active .step-number {
+  background: #1976d2;
+  color: white;
+}
+
+.step.completed .step-number {
+  background: #2e7d32;
+  color: white;
+}
+
+.step-label {
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+}
+
+.step.active .step-label {
+  color: #1976d2;
+  font-weight: 600;
+}
+
+.search-papers-section,
+.export-section,
+.enter-scores-section {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-papers-section h2,
+.export-section h2,
+.enter-scores-section h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.papers-table,
+.scores-table {
+  overflow-x: auto;
+  margin-bottom: 20px;
+}
+
+.papers-table table,
+.scores-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.papers-table thead,
+.scores-table thead {
+  background: #1976d2;
+  color: white;
+}
+
+.papers-table th,
+.scores-table th {
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+}
+
+.papers-table td,
+.scores-table td {
+  padding: 12px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.papers-table tbody tr:hover,
+.scores-table tbody tr:hover {
+  background: #f5f5f5;
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.badge-success {
+  background: #d4edda;
+  color: #155724;
+}
+
+.badge-warning {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.btn-confirm {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 12px;
+  background: #2e7d32;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background 0.3s ease;
+}
+
+.btn-confirm:hover {
+  background: #1b5e20;
+}
+
+.action-section {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn-primary,
+.btn-export,
+.btn-submit {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.btn-primary:hover,
+.btn-export:hover,
+.btn-submit:hover:not(:disabled) {
+  background: #1565c0;
+}
+
+.btn-export {
+  background: #2e7d32;
+}
+
+.btn-export:hover {
+  background: #1b5e20;
+}
+
+.btn-submit {
+  background: #2e7d32;
+}
+
+.btn-submit:hover:not(:disabled) {
+  background: #1b5e20;
+}
+
+.btn-submit:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.btn-print {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: #757575;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease;
+  margin-right: 10px;
+}
+
+.btn-print:hover {
+  background: #616161;
+}
+
+.info-box {
+  background: #e3f2fd;
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  border-left: 4px solid #1976d2;
+}
+
+.info-box p {
+  margin: 0;
+  color: #333;
+}
+
+.score-cell {
+  text-align: center;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.score-input {
+  width: 100px;
+  padding: 8px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.score-input:focus {
+  outline: none;
+  border-color: #1976d2;
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+}
+

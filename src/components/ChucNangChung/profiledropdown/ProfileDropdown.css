@@ -1,0 +1,85 @@
+.profile-dropdown {
+  position: absolute;
+  top: calc(
+    100% + 10px
+  ); /* Vị trí ngay dưới thẻ cha, cộng thêm 10px khoảng cách */
+  right: 0;
+  width: 220px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  border: 1px solid #e2e8f0;
+  z-index: 1000;
+
+  /* Hiệu ứng xuất hiện */
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: fadeIn 0.2s ease-out forwards;
+}
+
+/* Keyframes cho hiệu ứng */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.profile-dropdown__list {
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem;
+}
+
+.profile-dropdown__link {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #4a5568;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: background-color 0.2s, color 0.2s;
+
+  /* Reset style cho button */
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+}
+
+.profile-dropdown__link:hover {
+  background-color: #f7fafc;
+  color: #2d3748;
+}
+
+.profile-dropdown__icon {
+  font-size: 1.1rem;
+  color: #718096;
+}
+
+.profile-dropdown__link:hover .profile-dropdown__icon {
+  color: #4a90e2;
+}
+
+.profile-dropdown__separator {
+  height: 1px;
+  background-color: #e2e8f0;
+  margin: 0.5rem 0;
+}
+
+.profile-dropdown__link--logout:hover {
+  color: #e53e3e; /* Màu đỏ khi hover */
+}
+
+.profile-dropdown__link--logout:hover .profile-dropdown__icon {
+  color: #e53e3e;
+}

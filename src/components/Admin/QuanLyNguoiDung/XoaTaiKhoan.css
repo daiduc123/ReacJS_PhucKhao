@@ -1,0 +1,111 @@
+.AD_confirmation-dialog.AD_educational {
+  text-align: left;
+  padding: 0;
+}
+
+.AD_icon-wrapper {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.AD_icon-delete {
+  font-size: 48px;
+  display: inline-block;
+}
+
+.AD_dialog-title {
+  text-align: center;
+  color: var(--color-danger);
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.AD_dialog-message {
+  text-align: center;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.AD_user-info-box {
+  background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+  border: 2px solid var(--color-danger);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.AD_user-name {
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--color-danger);
+  margin: 0 0 8px 0;
+}
+
+.AD_user-detail {
+  color: var(--text-secondary);
+  font-size: 14px;
+  margin: 0;
+}
+
+.AD_warning-box {
+  background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+  border: 2px solid var(--color-danger);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  margin: 20px 0;
+  text-align: left;
+}
+
+.AD_warning-box.AD_educational-warning h4 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: var(--color-danger);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.AD_warning-intro {
+  color: var(--text-primary);
+  font-weight: 600;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.AD_warning-box ul {
+  padding-left: 20px;
+  margin: 12px 0;
+  color: var(--text-primary);
+  line-height: 1.8;
+}
+
+.AD_warning-box li {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.AD_warning-suggestion {
+  background: rgba(255, 255, 255, 0.7);
+  border-left: 4px solid #4caf50;
+  padding: 12px;
+  margin-top: 16px;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.AD_btn-danger {
+  background: linear-gradient(135deg, #d32f2f 0%, #b71c1c 100%);
+  color: #ffffff;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(211, 47, 47, 0.3);
+  transition: all 0.3s ease;
+}
+
+.AD_btn-danger:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(211, 47, 47, 0.4);
+}

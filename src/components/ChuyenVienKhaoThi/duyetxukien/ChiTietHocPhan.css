@@ -1,0 +1,276 @@
+.chitiet-container {
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.chitiet-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.btn-back {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: #757575;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-back:hover {
+  background: #616161;
+}
+
+.chitiet-header h1 {
+  color: #1976d2;
+  margin: 0;
+}
+
+.error-message {
+  background: #ffebee;
+  color: #c62828;
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  border-left: 4px solid #c62828;
+}
+
+.course-info-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.info-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.info-card h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #1976d2;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.info-grid div {
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+  color: #333;
+}
+
+.requests-section {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.section-header h2 {
+  margin: 0;
+  color: #333;
+}
+
+.btn-send {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: #2e7d32;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.btn-send:hover:not(:disabled) {
+  background: #1b5e20;
+}
+
+.btn-send:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.requests-table {
+  overflow-x: auto;
+}
+
+.requests-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.requests-table thead {
+  background: #1976d2;
+  color: white;
+}
+
+.requests-table th {
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+}
+
+.requests-table td {
+  padding: 12px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.requests-table tbody tr:hover {
+  background: #f5f5f5;
+}
+
+.score-cell {
+  text-align: center;
+  font-weight: 600;
+}
+
+.new-score {
+  color: #2e7d32;
+  font-size: 16px;
+}
+
+.no-score {
+  color: #999;
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.badge-warning {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.badge-processing {
+  background: #cce5ff;
+  color: #004085;
+}
+
+.badge-info {
+  background: #d1ecf1;
+  color: #0c5460;
+}
+
+.badge-waiting {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.badge-success {
+  background: #d4edda;
+  color: #155724;
+}
+
+.badge-default {
+  background: #e9ecef;
+  color: #495057;
+}
+
+.score-input-edit {
+  width: 80px;
+  padding: 6px;
+  border: 1px solid #1976d2;
+  border-radius: 4px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.score-input-edit:focus {
+  outline: none;
+  border-color: #1565c0;
+  box-shadow: 0 0 0 2px rgba(25, 118, 210, 0.2);
+}
+
+.edit-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.btn-edit,
+.btn-save,
+.btn-cancel {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.btn-edit {
+  background: #1976d2;
+  color: white;
+}
+
+.btn-edit:hover {
+  background: #1565c0;
+}
+
+.btn-save {
+  background: #2e7d32;
+  color: white;
+}
+
+.btn-save:hover {
+  background: #1b5e20;
+}
+
+.btn-cancel {
+  background: #757575;
+  color: white;
+}
+
+.btn-cancel:hover {
+  background: #616161;
+}
+
+.loading,
+.error {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+}
+
+.error {
+  color: #c62828;
+  background: #ffebee;
+  border-radius: 8px;
+}
+

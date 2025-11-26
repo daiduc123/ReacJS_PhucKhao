@@ -1,0 +1,246 @@
+.AD_tongquan-container {
+  padding: var(--spacing-lg);
+}
+
+.AD_loading,
+.AD_error {
+  text-align: center;
+  padding: 50px;
+  font-size: 1.2rem;
+  background-color: var(--bg-card);
+  margin: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.AD_error {
+  color: var(--color-danger);
+  background-color: #ffebee;
+  border: 1px solid var(--color-danger-light);
+}
+
+/* Stats Grid */
+.AD_stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+.AD_stat-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color-light);
+  border-left: 4px solid var(--color-primary); /* Màu nhấn xanh ngọc bích */
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  text-align: left;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.AD_stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-primary-light));
+}
+
+.AD_stat-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.AD_stat-title {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-md);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.AD_stat-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1;
+  margin: 0;
+}
+
+/* Main Content Grid */
+.AD_main-content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.AD_info-box,
+.AD_activity-box {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color-light);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+}
+
+.AD_info-box:hover,
+.AD_activity-box:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.AD_info-box h3,
+.AD_activity-box h3,
+.AD_quick-actions h3 {
+  margin-top: 0;
+  font-size: 1.3rem;
+  border-bottom: 2px solid var(--border-color-light);
+  padding-bottom: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.AD_info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px dotted #f0f0f0;
+}
+.AD_info-item:last-child {
+  border-bottom: none;
+}
+
+.AD_info-value {
+  padding: 6px 15px;
+  border-radius: 20px;
+  color: #333;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.AD_activity-box ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.AD_activity-box li {
+  padding: 10px 0;
+  border-bottom: 1px dotted #eee;
+}
+.AD_activity-box li:last-child {
+  border-bottom: none;
+}
+
+.AD_activity-box li p {
+  margin: 0 0 5px 0;
+  font-size: 1rem;
+  color: #343a40;
+}
+
+.AD_activity-box li small {
+  color: #6c757d;
+  font-size: 0.85rem;
+}
+
+/* Quick Actions */
+.AD_quick-actions {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color-light);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+}
+
+.AD_quick-actions:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.AD_action-buttons {
+  display: flex;
+  flex-wrap: wrap; /* Cho phép xuống dòng trên màn hình nhỏ */
+  gap: var(--spacing-md);
+}
+
+.AD_quick-btn {
+  flex-grow: 1; /* Cho phép nút giãn ra */
+  min-width: 200px; /* Chiều rộng tối thiểu cho mỗi nút */
+  padding: 14px 24px;
+  border: none;
+  border-radius: var(--radius-md);
+  color: var(--color-white);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  font-size: 1rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.AD_quick-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.AD_quick-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.AD_btn-green {
+  background-color: var(--color-success);
+}
+
+.AD_btn-green:hover:not(:disabled) {
+  background-color: var(--color-success-dark);
+}
+
+.AD_btn-blue {
+  background-color: var(--color-primary);
+}
+
+.AD_btn-blue:hover:not(:disabled) {
+  background-color: var(--color-primary-dark);
+}
+
+.AD_btn-purple {
+  background-color: #7b1fa2;
+}
+
+.AD_btn-purple:hover:not(:disabled) {
+  background-color: #6a1b9a;
+}
+
+.AD_btn-orange {
+  background-color: #ff9800;
+}
+
+.AD_btn-orange:hover:not(:disabled) {
+  background-color: #f57c00;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .AD_main-content-grid {
+    grid-template-columns: 1fr; /* Stack columns on smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .AD_stats-grid {
+    grid-template-columns: 1fr;
+  }
+  .AD_quick-btn {
+    min-width: unset; /* Bỏ min-width để giãn hết */
+    width: 100%;
+  }
+  .AD_action-buttons {
+    flex-direction: column; /* Xếp dọc các nút hành động */
+  }
+}

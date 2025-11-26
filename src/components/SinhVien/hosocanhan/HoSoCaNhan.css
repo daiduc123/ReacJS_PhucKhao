@@ -1,0 +1,17 @@
+.HSCN {
+  padding-left: 10px;
+}
+.noidung {
+  height: 25px;
+  width: calc(100% - 20px);
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  border-bottom: 2px solid #e9ebee;
+  padding-right: 10px;
+}
+.noidung h2 {
+  color: #004275;
+  font-size: 14px;
+  font-weight: bold;
+  padding-top: 2px;
+}

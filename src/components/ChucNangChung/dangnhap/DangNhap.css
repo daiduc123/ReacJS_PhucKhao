@@ -1,0 +1,183 @@
+/* ---- Block: dn-login ---- */
+.dn-login {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 50%, var(--color-primary-darker) 100%);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.dn-login::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
+  opacity: 0.3;
+}
+
+/* Element: card */
+.dn-login__card {
+  background: linear-gradient(135deg, var(--color-white) 0%, var(--color-gray-50) 100%);
+  padding: 48px 40px;
+  border-radius: var(--radius-xl);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  animation: fadeInUp 0.6s ease-out;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Element: header, logo, form, footer */
+.dn-login__header {
+  margin-bottom: 30px;
+}
+.dn-login__logo {
+  max-width: 80px;
+  margin-bottom: 10px;
+}
+.dn-login__form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.dn-login__footer {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin-top: 30px;
+}
+
+/* Element: form-group, input, options, button */
+.dn-login__form-group {
+  margin-bottom: 20px;
+}
+.dn-login__label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.dn-login__input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  box-sizing: border-box;
+}
+.dn-login__input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.15);
+}
+.dn-login__options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  margin-bottom: 25px;
+}
+.dn-login__remember-me {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.dn-login__forgot-password {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.dn-login__forgot-password:hover {
+  color: var(--color-primary-dark);
+}
+
+.dn-login__button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, var(--color-success) 0%, var(--color-success-dark) 100%);
+  color: var(--color-white);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  box-shadow: 0 4px 14px 0 rgba(46, 125, 50, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.dn-login__button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.dn-login__button:hover:not(:disabled)::before {
+  width: 300px;
+  height: 300px;
+}
+
+.dn-login__button:hover:not(:disabled) {
+  background: linear-gradient(135deg, var(--color-success-light) 0%, var(--color-success) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px 0 rgba(46, 125, 50, 0.25), var(--shadow-lg);
+}
+
+.dn-login__button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+/* Modifier: disabled state cho button */
+.dn-login__button--disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Element: error-message, error-text */
+.dn-login__error-message {
+  color: #c53030;
+  background-color: #fed7d7;
+  border: 1px solid #f56565;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+.dn-login__error-text {
+  color: #c53030;
+  font-size: 0.8rem;
+  margin-top: 4px;
+}

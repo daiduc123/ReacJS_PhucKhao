@@ -1,0 +1,98 @@
+.tldt-sidebar {
+  width: 260px;
+  background: linear-gradient(180deg, var(--color-success) 0%, var(--color-success-dark) 100%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.tldt-sidebar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.03) 50%, transparent 100%);
+  pointer-events: none;
+}
+
+.tldt-sidebar-header {
+  padding: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tldt-sidebar-header h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.tldt-sidebar-nav {
+  flex: 1;
+  padding: 20px 0;
+}
+
+.tldt-nav-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+  font-size: 14px;
+}
+
+.tldt-nav-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.tldt-nav-item.active {
+  background: rgba(255, 255, 255, 0.25);
+  color: white;
+  border-left: 4px solid white;
+  font-weight: 600;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.tldt-nav-item.active::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.tldt-nav-item svg {
+  font-size: 16px;
+}
+
+.tldt-sidebar-footer {
+  padding: 20px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tldt-main-content {
+  flex: 1;
+  overflow-y: auto;
+  min-height: 0; /* Đảm bảo flexbox hoạt động đúng */
+}
+
+@media (max-width: 768px) {
+  .tldt-sidebar {
+    width: 200px;
+  }
+}
+

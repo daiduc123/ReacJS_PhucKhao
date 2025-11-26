@@ -1,0 +1,229 @@
+/* Search and Filter Container */
+.AD_search-filter-container {
+  background: #f5f5f5;
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow-sm);
+}
+
+.AD_search-filter-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.AD_search-input-wrapper {
+  position: relative;
+  flex: 1;
+  min-width: 250px;
+}
+
+.AD_search-input {
+  width: 100%;
+  padding: 10px 40px 10px 16px;
+  border: 1px solid #d0d0d0;
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  background-color: #ffffff;
+  transition: all var(--transition-fast);
+}
+
+.AD_search-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(0, 51, 102, 0.1);
+}
+
+.AD_search-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666666;
+  font-size: 16px;
+  pointer-events: none;
+}
+
+.AD_filter-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.AD_filter-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.AD_filter-select {
+  padding: 10px 32px 10px 12px;
+  border: 1px solid #d0d0d0;
+  border-radius: var(--radius-md);
+  background-color: #ffffff;
+  font-size: 14px;
+  color: var(--text-primary);
+  cursor: pointer;
+  min-width: 160px;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  transition: all var(--transition-fast);
+}
+
+.AD_filter-select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(0, 51, 102, 0.1);
+}
+
+.AD_action-bar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+/* Table styles */
+.AD_table-container {
+  background: var(--bg-card);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color-light);
+  overflow-x: auto;
+}
+
+.AD_table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px;
+}
+
+.AD_table th,
+.AD_table td {
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color-light);
+}
+
+.AD_table th {
+  background-color: var(--color-gray-100);
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.AD_table tbody tr {
+  transition: background-color var(--transition-fast);
+}
+
+.AD_table tbody tr:hover {
+  background-color: var(--color-gray-50);
+}
+
+.AD_table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.AD_actions {
+  display: flex;
+  gap: var(--spacing-sm);
+  align-items: center;
+}
+
+.AD_action-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+  padding: 8px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+}
+
+.AD_action-btn:hover {
+  color: var(--color-primary);
+  background-color: var(--color-gray-100);
+}
+
+.AD_action-btn-delete:hover {
+  color: var(--color-danger);
+  background-color: #ffebee;
+}
+
+.AD_status-badge {
+  padding: 6px 12px;
+  border-radius: var(--radius-full);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-white);
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.AD_status-active {
+  background-color: var(--color-success);
+}
+
+.AD_status-locked {
+  background-color: var(--color-danger);
+}
+
+.AD_no-data {
+  text-align: center;
+  padding: var(--spacing-xl);
+  color: var(--text-secondary);
+  font-style: italic;
+  background-color: var(--color-gray-50);
+  border-radius: var(--radius-md);
+  margin: var(--spacing-lg) 0;
+}
+
+@media (max-width: 768px) {
+  .AD_search-filter-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .AD_search-input-wrapper {
+    min-width: 100%;
+  }
+  
+  .AD_filter-item {
+    width: 100%;
+  }
+  
+  .AD_filter-select {
+    width: 100%;
+    min-width: auto;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

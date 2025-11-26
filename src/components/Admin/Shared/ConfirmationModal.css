@@ -1,0 +1,55 @@
+.AD_confirmation-modal-content {
+  text-align: center;
+  padding: 10px;
+}
+
+.AD_confirmation-icon {
+  font-size: 3rem;
+  color: #ffc107; /* Màu vàng cảnh báo */
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.AD_confirmation-modal-content .AD_btn-danger .AD_confirmation-icon {
+  color: #dc3545; /* Màu đỏ nguy hiểm */
+}
+
+.AD_confirmation-message {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  padding: 0 10px;
+}
+
+.AD_confirmation-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.AD_btn-danger {
+  background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+  color: #ffffff;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(220, 53, 69, 0.3);
+  transition: all 0.3s ease;
+}
+
+.AD_btn-danger:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(220, 53, 69, 0.4);
+  background: linear-gradient(135deg, #c82333 0%, #bd2130 100%);
+}
+
+.AD_btn-danger:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Thêm style cho input error nếu cần */
+.AD_input-error {
+  border-color: #dc3545 !important;
+}
