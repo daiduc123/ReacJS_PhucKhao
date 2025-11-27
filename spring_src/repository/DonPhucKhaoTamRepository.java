@@ -13,3 +13,4 @@ public interface DonPhucKhaoTamRepository extends JpaRepository<DonPhucKhaoTam, 
     List<DonPhucKhaoTam> findBySinhVien_Id(Long idSv);
 }
 
+
