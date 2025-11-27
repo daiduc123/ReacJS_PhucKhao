@@ -1,24 +1,63 @@
 # Logs
-logs
+logs/
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
+# Dependencies
+node_modules/
+FE/node_modules/
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
+# Build outputs
+FE/dist/
+FE/build/
+springboot/target/
+springboot/bin/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+*.swp
+*.swo
+*~
+
+# OS
 .DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+Thumbs.db
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Maven
+.mvn/wrapper/maven-wrapper.jar
+
+# Spring Boot
+springboot/.mvn/
+springboot/mvnw
+springboot/mvnw.cmd
+
+# Temporary files
+*.tmp
+*.temp
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
