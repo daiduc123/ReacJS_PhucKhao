@@ -11,7 +11,7 @@ set DB_PASS=%2
 if "%DB_PASS%"=="" set DB_PASS=
 
 set DB_NAME=PhucKhao
-set SQL_FILE=..\FE\database\phuc_khao.sql
+set SQL_FILE=..\database\phuc_khao.sql
 
 echo ==========================================
 echo Import Database PhucKhao

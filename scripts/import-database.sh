@@ -6,7 +6,7 @@
 DB_USER=${1:-root}
 DB_PASS=${2:-}
 DB_NAME="PhucKhao"
-SQL_FILE="../FE/database/phuc_khao.sql"
+SQL_FILE="../database/phuc_khao.sql"
 
 echo "=========================================="
 echo "Import Database PhucKhao"

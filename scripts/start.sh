@@ -65,7 +65,7 @@ fi
 
 echo ""
 echo -e "${GREEN}🚀 Đang khởi động Backend (Spring Boot)...${NC}"
-cd FE/spring_src
+cd ../spring_src
 
 # Sử dụng Maven Wrapper nếu có, nếu không dùng mvn
 if [ -f "./mvnw" ]; then
@@ -89,7 +89,7 @@ fi
 
 echo ""
 echo -e "${GREEN}🚀 Đang khởi động Frontend (React + Vite)...${NC}"
-cd FE/Reactjs
+cd ../Reactjs
 
 # Kiểm tra node_modules
 if [ ! -d "node_modules" ]; then

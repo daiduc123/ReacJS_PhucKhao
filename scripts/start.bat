@@ -65,7 +65,7 @@ if %ERRORLEVEL% neq 0 (
 
 echo.
 echo 🚀 Đang khởi động Backend (Spring Boot)...
-cd FE\spring_src
+cd ..\spring_src
 
 REM Sử dụng Maven Wrapper nếu có, nếu không dùng mvn
 if exist "mvnw.cmd" (
@@ -82,7 +82,7 @@ timeout /t 30 /nobreak >nul
 
 echo.
 echo 🚀 Đang khởi động Frontend (React + Vite)...
-cd FE\Reactjs
+cd ..\Reactjs
 
 REM Kiểm tra node_modules
 if not exist "node_modules" (
